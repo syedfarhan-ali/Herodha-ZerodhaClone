@@ -6,14 +6,14 @@ import axios from "axios";
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = async () => {
     try{
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post(`https://herodha-7zhd.onrender.com/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

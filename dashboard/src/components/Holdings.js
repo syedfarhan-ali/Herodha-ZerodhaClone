@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 // import { holdings } from "../data/data";
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get(`https://herodha-7zhd.onrender.com/allHoldings`).then((res) => {
       console.log("data has come", res.data);
       setAllHoldings(res.data);
     });
