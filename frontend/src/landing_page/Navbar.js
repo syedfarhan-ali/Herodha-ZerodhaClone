@@ -30,6 +30,11 @@ function Navbar() {
           <form class="d-flex" role="search">
             <ul class="navbar-nav mb-lg-0">
               <li class="nav-item">
+                <a href="https://dashboard-zeta-pink-64.vercel.app/" class="nav-link active" >
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
                 <Link class="nav-link active" aria-current="page" to="/signup">
                   Signup
                 </Link>
